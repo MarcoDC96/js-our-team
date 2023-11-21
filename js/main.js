@@ -46,24 +46,17 @@ for(let i = 0; i < ourTeam.length; i++){
     console.log("");
 }
 
-let containerCard = document.getElementById("card") 
-    for (let i = 0; i < ourTeam.length; i++) { 
-    let member = ourTeam[i]
-    for (let key in member){ 
-        let memberDetails = member[key]
-    }
+for(let i = 0; i < ourTeam.length; i++){
+document.getElementById("cards").innerHTML+=`
 
-    
-let card =  `   
-<div class="col-3 m-2"> 
-<div class="card"> <img src="${[member.foto]}" 
-class="card-img-top" alt="foto"> <div class="card-body">   
-<h5 class="titolo-card">${[member.nome]}</h5>   
-<p class="card-text">   ${[member.ruolo]}</p>   
-</div> 
-</div> 
-</div> `
+    <div class="col-3 m-3 card text-center">
+        <img src="${ourTeam[i].foto}" class="card-img-top" alt="Prima foto">
+    <div class="card-body">
+        <h6 class="card-text">${ourTeam[i].nome}</h6>
+        <p>${ourTeam[i].ruolo}</p>
+    </div>
+</div>
 
-containerCard.insertAdjacentHTML("beforeend",card)
+
+`
 }
-
